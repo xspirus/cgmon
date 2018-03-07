@@ -1,9 +1,9 @@
 # cgmon
 1st set of exercises for OS-Lab 8th semester
 
-# Code
+## Code
 Code is written in `python`
 
-# Contributors
-Dontas Spiros
+## Contributors
+Dontas Spiros\
 Kalafatis Lefteris
