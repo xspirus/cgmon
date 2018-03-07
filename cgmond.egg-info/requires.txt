@@ -1,0 +1,5 @@
+lockfile==0.12.2
+argparse
+python-daemon<2.1
+jsonrpclib
+cliff<2

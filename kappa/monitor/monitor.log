@@ -1,0 +1,812 @@
+2018-03-07 15:20:02,232 - MonitorResource:DEBUG: Loaded policy submodules: []
+2018-03-07 15:20:02,233 - MonitorResource:DEBUG: Loaded usage submodules: []
+2018-03-07 15:20:02,233 - MonitorResource:DEBUG: Loaded limit submodules: ['limit', 'external']
+2018-03-07 15:20:02,233 - MonitorResource:DEBUG: Using limit submodule 'limit'
+2018-03-07 15:20:02,238 - CPUResource:DEBUG: Loaded policy submodules: ['cpulimit', 'external', 'cpuweight']
+2018-03-07 15:20:02,238 - CPUResource:DEBUG: Loaded usage submodules: ['usage']
+2018-03-07 15:20:02,240 - CPUResource:DEBUG: Loaded limit submodules: ['limit', 'external']
+2018-03-07 15:20:02,241 - ExternalPolicy:DEBUG: Using executable '/root/cgmon/kappa/mod_policy_cpumin.py'
+2018-03-07 15:20:02,241 - CPUResource:DEBUG: Using policy submodule 'external'
+2018-03-07 15:20:02,241 - CPUResource:DEBUG: Using usage submodule 'usage'
+2018-03-07 15:20:02,241 - ExternalLimit:DEBUG: Using executable '/root/cgmon/kappa/mod_limit_cpu.py'
+2018-03-07 15:20:02,241 - CPUResource:DEBUG: Using limit submodule 'external'
+2018-03-07 15:20:02,496 - MonitorServer:INFO: Starting...
+2018-03-07 15:20:02,497 - MonitorServer:DEBUG: Registering command app_list
+2018-03-07 15:20:02,497 - MonitorServer:DEBUG: Registering command app_spawn
+2018-03-07 15:20:02,498 - MonitorServer:DEBUG: Registering command stop
+2018-03-07 15:20:02,498 - MonitorServer:DEBUG: Registering command resource_list
+2018-03-07 15:20:02,498 - MonitorServer:DEBUG: Registering command app_attach
+2018-03-07 15:20:02,498 - MonitorServer:DEBUG: Registering command kill
+2018-03-07 15:20:02,498 - MonitorServer:DEBUG: Registering command remove
+2018-03-07 15:20:02,498 - MonitorServer:DEBUG: Registering command limit_apply
+2018-03-07 15:20:02,498 - MonitorServer:DEBUG: Registering command limit_list
+2018-03-07 15:20:02,498 - MonitorServer:DEBUG: Registering command limit_create
+2018-03-07 15:20:02,499 - MonitorServer:INFO: Entering  main loop
+2018-03-07 15:20:07,344 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\n
+2018-03-07 15:20:07,373 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:20:07,373 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:20:07,374 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\n
+2018-03-07 15:20:07,403 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:20:07,403 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:20:07,404 - CPUResource:DEBUG: Creating CPU resource for BANKDB
+2018-03-07 15:20:07,404 - ExternalLimit:DEBUG: Creating CPU cgroup for BANKDB
+2018-03-07 15:20:07,404 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:BANKDB\n
+2018-03-07 15:20:07,444 - ExternalLimit:INFO: Created CPU cgroup for BANKDB
+2018-03-07 15:20:07,444 - CPUResource:INFO: Created CPU cgroup for BANKDB
+2018-03-07 15:20:07,454 - CPUResource:DEBUG: Adding 6925 in CPU cgroup for BANKDB
+2018-03-07 15:20:07,456 - ExternalLimit:DEBUG: Adding 6925 in CPU cgroup for BANKDB
+2018-03-07 15:20:07,457 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:BANKDB:6925\n
+2018-03-07 15:20:07,527 - ExternalLimit:INFO: Added 6925 in CPU cgroup for BANKDB
+2018-03-07 15:20:07,528 - CPUResource:INFO: Added 6925 in CPU cgroup for BANKDB
+2018-03-07 15:20:07,533 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:20:07,534 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:BANKDB:cpu.shares:1000\n
+2018-03-07 15:20:07,916 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\n
+2018-03-07 15:20:07,944 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:20:07,944 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:20:07,944 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\n
+2018-03-07 15:20:07,971 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:20:07,972 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:20:07,972 - CPUResource:DEBUG: Creating CPU resource for WEBDB
+2018-03-07 15:20:07,972 - ExternalLimit:DEBUG: Creating CPU cgroup for WEBDB
+2018-03-07 15:20:07,972 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:WEBDB\n
+2018-03-07 15:20:08,008 - ExternalLimit:INFO: Created CPU cgroup for WEBDB
+2018-03-07 15:20:08,008 - CPUResource:INFO: Created CPU cgroup for WEBDB
+2018-03-07 15:20:08,013 - CPUResource:DEBUG: Adding 6937 in CPU cgroup for WEBDB
+2018-03-07 15:20:08,014 - ExternalLimit:DEBUG: Adding 6937 in CPU cgroup for WEBDB
+2018-03-07 15:20:08,014 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:WEBDB:6937\n
+2018-03-07 15:20:08,073 - ExternalLimit:INFO: Added 6937 in CPU cgroup for WEBDB
+2018-03-07 15:20:08,074 - CPUResource:INFO: Added 6937 in CPU cgroup for WEBDB
+2018-03-07 15:20:08,079 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:20:08,080 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:20:08,081 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\n
+2018-03-07 15:20:08,439 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:20:08,465 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:20:08,465 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:20:08,465 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:20:08,490 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:20:08,490 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:20:08,491 - CPUResource:DEBUG: Creating CPU resource for VIDEOENC
+2018-03-07 15:20:08,491 - ExternalLimit:DEBUG: Creating CPU cgroup for VIDEOENC
+2018-03-07 15:20:08,491 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:VIDEOENC\n
+2018-03-07 15:20:08,524 - ExternalLimit:INFO: Created CPU cgroup for VIDEOENC
+2018-03-07 15:20:08,524 - CPUResource:INFO: Created CPU cgroup for VIDEOENC
+2018-03-07 15:20:08,529 - CPUResource:DEBUG: Adding 6947 in CPU cgroup for VIDEOENC
+2018-03-07 15:20:08,530 - ExternalLimit:DEBUG: Adding 6947 in CPU cgroup for VIDEOENC
+2018-03-07 15:20:08,530 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:VIDEOENC:6947\n
+2018-03-07 15:20:08,558 - ExternalLimit:INFO: Added 6947 in CPU cgroup for VIDEOENC
+2018-03-07 15:20:08,559 - CPUResource:INFO: Added 6947 in CPU cgroup for VIDEOENC
+2018-03-07 15:20:08,561 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:20:08,562 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:20:08,562 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:20:08,562 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:20:08,782 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:20:08,807 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:20:08,808 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:20:08,808 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:20:08,833 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:20:08,833 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:20:08,834 - CPUResource:DEBUG: Creating CPU resource for SPAMBOT
+2018-03-07 15:20:08,834 - ExternalLimit:DEBUG: Creating CPU cgroup for SPAMBOT
+2018-03-07 15:20:08,834 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:SPAMBOT\n
+2018-03-07 15:20:08,867 - ExternalLimit:INFO: Created CPU cgroup for SPAMBOT
+2018-03-07 15:20:08,867 - CPUResource:INFO: Created CPU cgroup for SPAMBOT
+2018-03-07 15:20:08,872 - CPUResource:DEBUG: Adding 6957 in CPU cgroup for SPAMBOT
+2018-03-07 15:20:08,873 - ExternalLimit:DEBUG: Adding 6957 in CPU cgroup for SPAMBOT
+2018-03-07 15:20:08,873 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:SPAMBOT:6957\n
+2018-03-07 15:20:08,901 - ExternalLimit:INFO: Added 6957 in CPU cgroup for SPAMBOT
+2018-03-07 15:20:08,902 - CPUResource:INFO: Added 6957 in CPU cgroup for SPAMBOT
+2018-03-07 15:20:08,904 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:20:08,905 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:20:08,905 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:20:08,905 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:20:08,905 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:20:14,544 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:20:14,589 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:20:14,589 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:20:14,590 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:20:14,625 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:20:14,625 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:20:14,625 - Monitor:WARNING: Resource CPU returned negative score (-1.0) while spawning 'MEDICALDB' with policy 'platinum'.
+2018-03-07 15:20:15,860 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:20:15,905 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:20:15,906 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:20:15,906 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:20:15,945 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:20:15,945 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:20:15,945 - Monitor:INFO: Ignoring negative score -1.0 for resource CPU while spawning 'MEDICALDB' with policy 'platinum'.
+2018-03-07 15:20:15,946 - CPUResource:DEBUG: Creating CPU resource for MEDICALDB
+2018-03-07 15:20:15,946 - ExternalLimit:DEBUG: Creating CPU cgroup for MEDICALDB
+2018-03-07 15:20:15,946 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:MEDICALDB\n
+2018-03-07 15:20:15,996 - ExternalLimit:INFO: Created CPU cgroup for MEDICALDB
+2018-03-07 15:20:15,997 - CPUResource:INFO: Created CPU cgroup for MEDICALDB
+2018-03-07 15:20:16,004 - CPUResource:DEBUG: Adding 6979 in CPU cgroup for MEDICALDB
+2018-03-07 15:20:16,004 - ExternalLimit:DEBUG: Adding 6979 in CPU cgroup for MEDICALDB
+2018-03-07 15:20:16,005 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:MEDICALDB:6979\n
+2018-03-07 15:20:16,044 - ExternalLimit:INFO: Added 6979 in CPU cgroup for MEDICALDB
+2018-03-07 15:20:16,045 - CPUResource:INFO: Added 6979 in CPU cgroup for MEDICALDB
+2018-03-07 15:20:16,047 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:20:16,048 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:20:16,048 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:20:16,048 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:20:16,048 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:20:16,048 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:20:26,523 - CPUResource:DEBUG: Removing app BANKDB
+2018-03-07 15:20:26,523 - ExternalLimit:DEBUG: Removing task BANKDB
+2018-03-07 15:20:26,524 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:BANKDB\n
+2018-03-07 15:20:26,613 - ExternalLimit:INFO: Removed task BANKDB
+2018-03-07 15:20:26,613 - CPUResource:INFO: Removed app BANKDB
+2018-03-07 15:20:26,613 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:20:26,657 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:20:26,658 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:20:26,658 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:20:26,696 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:20:26,696 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:20:26,697 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:20:26,697 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:20:26,697 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:20:26,697 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:20:26,697 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:20:26,732 - CPUResource:DEBUG: Removing app VIDEOENC
+2018-03-07 15:20:26,732 - ExternalLimit:DEBUG: Removing task VIDEOENC
+2018-03-07 15:20:26,732 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:VIDEOENC\n
+2018-03-07 15:20:26,770 - ExternalLimit:INFO: Removed task VIDEOENC
+2018-03-07 15:20:26,771 - CPUResource:INFO: Removed app VIDEOENC
+2018-03-07 15:20:26,771 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:MEDICALDB:cpu:1000\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:20:26,798 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:20:26,798 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:20:26,798 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:MEDICALDB:cpu:1000\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:20:26,825 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:20:26,825 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:20:26,826 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:20:26,826 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:20:26,826 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:20:26,826 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:20:26,866 - CPUResource:DEBUG: Removing app WEBDB
+2018-03-07 15:20:26,866 - ExternalLimit:DEBUG: Removing task WEBDB
+2018-03-07 15:20:26,866 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:WEBDB\n
+2018-03-07 15:20:26,910 - ExternalLimit:INFO: Removed task WEBDB
+2018-03-07 15:20:26,911 - CPUResource:INFO: Removed app WEBDB
+2018-03-07 15:20:26,911 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\n
+2018-03-07 15:20:26,948 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:20:26,948 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000)}
+2018-03-07 15:20:26,949 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\n
+2018-03-07 15:20:27,009 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:20:27,010 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000)}
+2018-03-07 15:20:27,010 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:20:27,011 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:20:27,011 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:20:27,083 - CPUResource:DEBUG: Removing app SPAMBOT
+2018-03-07 15:20:27,088 - ExternalLimit:DEBUG: Removing task SPAMBOT
+2018-03-07 15:20:27,088 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:SPAMBOT\n
+2018-03-07 15:20:27,144 - ExternalLimit:INFO: Removed task SPAMBOT
+2018-03-07 15:20:27,144 - CPUResource:INFO: Removed app SPAMBOT
+2018-03-07 15:20:27,145 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:MEDICALDB:cpu:1000\n
+2018-03-07 15:20:27,205 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:20:27,206 - ExternalPolicy:DEBUG: Calculated limits {'MEDICALDB': CPULimit(shares=1000)}
+2018-03-07 15:20:27,206 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:MEDICALDB:cpu:1000\n
+2018-03-07 15:20:27,266 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:20:27,267 - ExternalPolicy:DEBUG: Calculated limits {'MEDICALDB': CPULimit(shares=1000)}
+2018-03-07 15:20:27,268 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:20:27,268 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:20:27,345 - CPUResource:DEBUG: Removing app MEDICALDB
+2018-03-07 15:20:27,345 - ExternalLimit:DEBUG: Removing task MEDICALDB
+2018-03-07 15:20:27,346 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:MEDICALDB\n
+2018-03-07 15:20:27,446 - ExternalLimit:INFO: Removed task MEDICALDB
+2018-03-07 15:20:27,447 - CPUResource:INFO: Removed app MEDICALDB
+2018-03-07 15:20:27,447 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input 
+2018-03-07 15:20:27,510 - ExternalPolicy:DEBUG: Got output: score:1.0\n
+2018-03-07 15:20:27,510 - ExternalPolicy:DEBUG: Calculated limits {}
+2018-03-07 15:20:27,511 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input 
+2018-03-07 15:20:27,572 - ExternalPolicy:DEBUG: Got output: score:1.0\n
+2018-03-07 15:20:27,573 - ExternalPolicy:DEBUG: Calculated limits {}
+2018-03-07 15:20:27,574 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input 
+2018-03-07 15:23:08,798 - MonitorServer:INFO: Stopping server
+2018-03-07 15:23:10,458 - MonitorResource:DEBUG: Loaded policy submodules: []
+2018-03-07 15:23:10,458 - MonitorResource:DEBUG: Loaded usage submodules: []
+2018-03-07 15:23:10,459 - MonitorResource:DEBUG: Loaded limit submodules: ['limit', 'external']
+2018-03-07 15:23:10,459 - MonitorResource:DEBUG: Using limit submodule 'limit'
+2018-03-07 15:23:10,463 - CPUResource:DEBUG: Loaded policy submodules: ['cpulimit', 'external', 'cpuweight']
+2018-03-07 15:23:10,464 - CPUResource:DEBUG: Loaded usage submodules: ['usage']
+2018-03-07 15:23:10,466 - CPUResource:DEBUG: Loaded limit submodules: ['limit', 'external']
+2018-03-07 15:23:10,466 - ExternalPolicy:DEBUG: Using executable '/root/cgmon/kappa/mod_policy_cpumin.py'
+2018-03-07 15:23:10,466 - CPUResource:DEBUG: Using policy submodule 'external'
+2018-03-07 15:23:10,466 - CPUResource:DEBUG: Using usage submodule 'usage'
+2018-03-07 15:23:10,466 - ExternalLimit:DEBUG: Using executable '/root/cgmon/kappa/mod_limit_cpu.py'
+2018-03-07 15:23:10,466 - CPUResource:DEBUG: Using limit submodule 'external'
+2018-03-07 15:23:10,949 - MonitorServer:INFO: Starting...
+2018-03-07 15:23:10,950 - MonitorServer:DEBUG: Registering command app_list
+2018-03-07 15:23:10,951 - MonitorServer:DEBUG: Registering command app_spawn
+2018-03-07 15:23:10,951 - MonitorServer:DEBUG: Registering command stop
+2018-03-07 15:23:10,951 - MonitorServer:DEBUG: Registering command resource_list
+2018-03-07 15:23:10,951 - MonitorServer:DEBUG: Registering command app_attach
+2018-03-07 15:23:10,951 - MonitorServer:DEBUG: Registering command kill
+2018-03-07 15:23:10,951 - MonitorServer:DEBUG: Registering command remove
+2018-03-07 15:23:10,951 - MonitorServer:DEBUG: Registering command limit_apply
+2018-03-07 15:23:10,951 - MonitorServer:DEBUG: Registering command limit_list
+2018-03-07 15:23:10,952 - MonitorServer:DEBUG: Registering command limit_create
+2018-03-07 15:23:10,952 - MonitorServer:INFO: Entering  main loop
+2018-03-07 15:23:15,406 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\n
+2018-03-07 15:23:15,435 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:23:15,436 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:23:15,436 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\n
+2018-03-07 15:23:15,465 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:23:15,465 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:23:15,465 - CPUResource:DEBUG: Creating CPU resource for BANKDB
+2018-03-07 15:23:15,466 - ExternalLimit:DEBUG: Creating CPU cgroup for BANKDB
+2018-03-07 15:23:15,466 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:BANKDB\n
+2018-03-07 15:23:15,513 - ExternalLimit:INFO: Created CPU cgroup for BANKDB
+2018-03-07 15:23:15,514 - CPUResource:INFO: Created CPU cgroup for BANKDB
+2018-03-07 15:23:15,525 - CPUResource:DEBUG: Adding 7994 in CPU cgroup for BANKDB
+2018-03-07 15:23:15,527 - ExternalLimit:DEBUG: Adding 7994 in CPU cgroup for BANKDB
+2018-03-07 15:23:15,528 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:BANKDB:7994\n
+2018-03-07 15:23:15,600 - ExternalLimit:INFO: Added 7994 in CPU cgroup for BANKDB
+2018-03-07 15:23:15,601 - CPUResource:INFO: Added 7994 in CPU cgroup for BANKDB
+2018-03-07 15:23:15,607 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:23:15,608 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:BANKDB:cpu.shares:1000\n
+2018-03-07 15:23:15,962 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\n
+2018-03-07 15:23:15,987 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:23:15,987 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:23:15,988 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\n
+2018-03-07 15:23:16,013 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:23:16,013 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:23:16,014 - CPUResource:DEBUG: Creating CPU resource for WEBDB
+2018-03-07 15:23:16,014 - ExternalLimit:DEBUG: Creating CPU cgroup for WEBDB
+2018-03-07 15:23:16,014 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:WEBDB\n
+2018-03-07 15:23:16,048 - ExternalLimit:INFO: Created CPU cgroup for WEBDB
+2018-03-07 15:23:16,048 - CPUResource:INFO: Created CPU cgroup for WEBDB
+2018-03-07 15:23:16,053 - CPUResource:DEBUG: Adding 8004 in CPU cgroup for WEBDB
+2018-03-07 15:23:16,054 - ExternalLimit:DEBUG: Adding 8004 in CPU cgroup for WEBDB
+2018-03-07 15:23:16,054 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:WEBDB:8004\n
+2018-03-07 15:23:16,084 - ExternalLimit:INFO: Added 8004 in CPU cgroup for WEBDB
+2018-03-07 15:23:16,084 - CPUResource:INFO: Added 8004 in CPU cgroup for WEBDB
+2018-03-07 15:23:16,087 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:23:16,087 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:23:16,088 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\n
+2018-03-07 15:23:16,417 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:23:16,444 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:16,444 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:23:16,445 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:23:16,472 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:16,472 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:23:16,473 - CPUResource:DEBUG: Creating CPU resource for VIDEOENC
+2018-03-07 15:23:16,473 - ExternalLimit:DEBUG: Creating CPU cgroup for VIDEOENC
+2018-03-07 15:23:16,473 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:VIDEOENC\n
+2018-03-07 15:23:16,510 - ExternalLimit:INFO: Created CPU cgroup for VIDEOENC
+2018-03-07 15:23:16,510 - CPUResource:INFO: Created CPU cgroup for VIDEOENC
+2018-03-07 15:23:16,515 - CPUResource:DEBUG: Adding 8016 in CPU cgroup for VIDEOENC
+2018-03-07 15:23:16,516 - ExternalLimit:DEBUG: Adding 8016 in CPU cgroup for VIDEOENC
+2018-03-07 15:23:16,516 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:VIDEOENC:8016\n
+2018-03-07 15:23:16,546 - ExternalLimit:INFO: Added 8016 in CPU cgroup for VIDEOENC
+2018-03-07 15:23:16,546 - CPUResource:INFO: Added 8016 in CPU cgroup for VIDEOENC
+2018-03-07 15:23:16,548 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:23:16,549 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:23:16,549 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:23:16,549 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:16,876 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:23:16,920 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:23:16,920 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:23:16,921 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:23:16,961 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:23:16,962 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:23:16,962 - CPUResource:DEBUG: Creating CPU resource for SPAMBOT
+2018-03-07 15:23:16,962 - ExternalLimit:DEBUG: Creating CPU cgroup for SPAMBOT
+2018-03-07 15:23:16,963 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:SPAMBOT\n
+2018-03-07 15:23:17,020 - ExternalLimit:INFO: Created CPU cgroup for SPAMBOT
+2018-03-07 15:23:17,020 - CPUResource:INFO: Created CPU cgroup for SPAMBOT
+2018-03-07 15:23:17,027 - CPUResource:DEBUG: Adding 8028 in CPU cgroup for SPAMBOT
+2018-03-07 15:23:17,032 - ExternalLimit:DEBUG: Adding 8028 in CPU cgroup for SPAMBOT
+2018-03-07 15:23:17,032 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:SPAMBOT:8028\n
+2018-03-07 15:23:17,071 - ExternalLimit:INFO: Added 8028 in CPU cgroup for SPAMBOT
+2018-03-07 15:23:17,071 - CPUResource:INFO: Added 8028 in CPU cgroup for SPAMBOT
+2018-03-07 15:23:17,074 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:23:17,074 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:23:17,074 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:23:17,074 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:23:17,075 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:22,661 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:23:22,687 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:22,687 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:23:22,687 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:23:22,712 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:22,713 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:23:22,713 - Monitor:WARNING: Resource CPU returned negative score (-1.0) while spawning 'MEDICALDB' with policy 'platinum'.
+2018-03-07 15:23:23,968 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:23:23,998 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:23,998 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:23:23,999 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:23:24,028 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:24,029 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:23:24,029 - Monitor:INFO: Ignoring negative score -1.0 for resource CPU while spawning 'MEDICALDB' with policy 'platinum'.
+2018-03-07 15:23:24,029 - CPUResource:DEBUG: Creating CPU resource for MEDICALDB
+2018-03-07 15:23:24,029 - ExternalLimit:DEBUG: Creating CPU cgroup for MEDICALDB
+2018-03-07 15:23:24,029 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:MEDICALDB\n
+2018-03-07 15:23:24,091 - ExternalLimit:INFO: Created CPU cgroup for MEDICALDB
+2018-03-07 15:23:24,092 - CPUResource:INFO: Created CPU cgroup for MEDICALDB
+2018-03-07 15:23:24,099 - CPUResource:DEBUG: Adding 8048 in CPU cgroup for MEDICALDB
+2018-03-07 15:23:24,100 - ExternalLimit:DEBUG: Adding 8048 in CPU cgroup for MEDICALDB
+2018-03-07 15:23:24,100 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:MEDICALDB:8048\n
+2018-03-07 15:23:24,144 - ExternalLimit:INFO: Added 8048 in CPU cgroup for MEDICALDB
+2018-03-07 15:23:24,144 - CPUResource:INFO: Added 8048 in CPU cgroup for MEDICALDB
+2018-03-07 15:23:24,147 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:23:24,147 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:23:24,147 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:23:24,147 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:23:24,148 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:23:24,148 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:34,625 - CPUResource:DEBUG: Removing app MEDICALDB
+2018-03-07 15:23:34,625 - ExternalLimit:DEBUG: Removing task MEDICALDB
+2018-03-07 15:23:34,625 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:MEDICALDB\n
+2018-03-07 15:23:34,709 - ExternalLimit:INFO: Removed task MEDICALDB
+2018-03-07 15:23:34,709 - CPUResource:INFO: Removed app MEDICALDB
+2018-03-07 15:23:34,709 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:23:34,750 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:23:34,750 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:23:34,750 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:23:34,787 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:23:34,787 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:23:34,788 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:23:34,788 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:23:34,788 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:23:34,788 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:23:34,788 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:34,821 - CPUResource:DEBUG: Removing app WEBDB
+2018-03-07 15:23:34,821 - ExternalLimit:DEBUG: Removing task WEBDB
+2018-03-07 15:23:34,822 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:WEBDB\n
+2018-03-07 15:23:34,901 - ExternalLimit:INFO: Removed task WEBDB
+2018-03-07 15:23:34,902 - CPUResource:INFO: Removed app WEBDB
+2018-03-07 15:23:34,902 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:23:34,967 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:34,967 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:23:34,967 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:23:34,996 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:34,997 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:23:34,997 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:23:34,997 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:23:34,997 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:23:34,998 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:23:35,032 - CPUResource:DEBUG: Removing app VIDEOENC
+2018-03-07 15:23:35,032 - ExternalLimit:DEBUG: Removing task VIDEOENC
+2018-03-07 15:23:35,032 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:VIDEOENC\n
+2018-03-07 15:23:35,068 - ExternalLimit:INFO: Removed task VIDEOENC
+2018-03-07 15:23:35,068 - CPUResource:INFO: Removed app VIDEOENC
+2018-03-07 15:23:35,068 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\npolicy:BANKDB:cpu:1000\n
+2018-03-07 15:23:35,131 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:23:35,132 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50), 'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:23:35,133 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\npolicy:BANKDB:cpu:1000\n
+2018-03-07 15:23:35,195 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:23:35,196 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50), 'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:23:35,197 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:23:35,197 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:23:35,197 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:23:35,271 - CPUResource:DEBUG: Removing app BANKDB
+2018-03-07 15:23:35,272 - ExternalLimit:DEBUG: Removing task BANKDB
+2018-03-07 15:23:35,272 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:BANKDB\n
+2018-03-07 15:23:35,364 - ExternalLimit:INFO: Removed task BANKDB
+2018-03-07 15:23:35,365 - CPUResource:INFO: Removed app BANKDB
+2018-03-07 15:23:35,365 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\n
+2018-03-07 15:23:35,429 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:23:35,429 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:23:35,430 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\n
+2018-03-07 15:23:35,492 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:23:35,492 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:23:35,493 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:23:35,493 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:23:35,572 - CPUResource:DEBUG: Removing app SPAMBOT
+2018-03-07 15:23:35,572 - ExternalLimit:DEBUG: Removing task SPAMBOT
+2018-03-07 15:23:35,573 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:SPAMBOT\n
+2018-03-07 15:23:35,674 - ExternalLimit:INFO: Removed task SPAMBOT
+2018-03-07 15:23:35,675 - CPUResource:INFO: Removed app SPAMBOT
+2018-03-07 15:23:35,675 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input 
+2018-03-07 15:23:35,739 - ExternalPolicy:DEBUG: Got output: score:1.0\n
+2018-03-07 15:23:35,740 - ExternalPolicy:DEBUG: Calculated limits {}
+2018-03-07 15:23:35,740 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input 
+2018-03-07 15:23:35,802 - ExternalPolicy:DEBUG: Got output: score:1.0\n
+2018-03-07 15:23:35,802 - ExternalPolicy:DEBUG: Calculated limits {}
+2018-03-07 15:23:35,803 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input 
+2018-03-07 15:24:04,633 - MonitorServer:INFO: Stopping server
+2018-03-07 15:24:06,393 - MonitorResource:DEBUG: Loaded policy submodules: []
+2018-03-07 15:24:06,394 - MonitorResource:DEBUG: Loaded usage submodules: []
+2018-03-07 15:24:06,394 - MonitorResource:DEBUG: Loaded limit submodules: ['limit', 'external']
+2018-03-07 15:24:06,394 - MonitorResource:DEBUG: Using limit submodule 'limit'
+2018-03-07 15:24:06,400 - CPUResource:DEBUG: Loaded policy submodules: ['cpulimit', 'external', 'cpuweight']
+2018-03-07 15:24:06,401 - CPUResource:DEBUG: Loaded usage submodules: ['usage']
+2018-03-07 15:24:06,402 - CPUResource:DEBUG: Loaded limit submodules: ['limit', 'external']
+2018-03-07 15:24:06,403 - ExternalPolicy:DEBUG: Using executable '/root/cgmon/kappa/mod_policy_cpumin.py'
+2018-03-07 15:24:06,403 - CPUResource:DEBUG: Using policy submodule 'external'
+2018-03-07 15:24:06,403 - CPUResource:DEBUG: Using usage submodule 'usage'
+2018-03-07 15:24:06,403 - ExternalLimit:DEBUG: Using executable '/root/cgmon/kappa/mod_limit_cpu.py'
+2018-03-07 15:24:06,403 - CPUResource:DEBUG: Using limit submodule 'external'
+2018-03-07 15:24:06,651 - MonitorServer:INFO: Starting...
+2018-03-07 15:24:06,653 - MonitorServer:DEBUG: Registering command app_list
+2018-03-07 15:24:06,653 - MonitorServer:DEBUG: Registering command app_spawn
+2018-03-07 15:24:06,653 - MonitorServer:DEBUG: Registering command stop
+2018-03-07 15:24:06,653 - MonitorServer:DEBUG: Registering command resource_list
+2018-03-07 15:24:06,653 - MonitorServer:DEBUG: Registering command app_attach
+2018-03-07 15:24:06,653 - MonitorServer:DEBUG: Registering command kill
+2018-03-07 15:24:06,653 - MonitorServer:DEBUG: Registering command remove
+2018-03-07 15:24:06,654 - MonitorServer:DEBUG: Registering command limit_apply
+2018-03-07 15:24:06,654 - MonitorServer:DEBUG: Registering command limit_list
+2018-03-07 15:24:06,654 - MonitorServer:DEBUG: Registering command limit_create
+2018-03-07 15:24:06,654 - MonitorServer:INFO: Entering  main loop
+2018-03-07 15:24:11,526 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\n
+2018-03-07 15:24:11,584 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:24:11,585 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:24:11,586 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\n
+2018-03-07 15:24:11,616 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:24:11,617 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:24:11,618 - CPUResource:DEBUG: Creating CPU resource for BANKDB
+2018-03-07 15:24:11,618 - ExternalLimit:DEBUG: Creating CPU cgroup for BANKDB
+2018-03-07 15:24:11,618 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:BANKDB\n
+2018-03-07 15:24:11,695 - ExternalLimit:INFO: Created CPU cgroup for BANKDB
+2018-03-07 15:24:11,696 - CPUResource:INFO: Created CPU cgroup for BANKDB
+2018-03-07 15:24:11,701 - CPUResource:DEBUG: Adding 8173 in CPU cgroup for BANKDB
+2018-03-07 15:24:11,702 - ExternalLimit:DEBUG: Adding 8173 in CPU cgroup for BANKDB
+2018-03-07 15:24:11,703 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:BANKDB:8173\n
+2018-03-07 15:24:11,735 - ExternalLimit:INFO: Added 8173 in CPU cgroup for BANKDB
+2018-03-07 15:24:11,735 - CPUResource:INFO: Added 8173 in CPU cgroup for BANKDB
+2018-03-07 15:24:11,738 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:24:11,739 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:BANKDB:cpu.shares:1000\n
+2018-03-07 15:24:12,165 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\n
+2018-03-07 15:24:12,191 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:24:12,192 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:24:12,192 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\n
+2018-03-07 15:24:12,217 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:24:12,217 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:24:12,218 - CPUResource:DEBUG: Creating CPU resource for WEBDB
+2018-03-07 15:24:12,218 - ExternalLimit:DEBUG: Creating CPU cgroup for WEBDB
+2018-03-07 15:24:12,218 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:WEBDB\n
+2018-03-07 15:24:12,251 - ExternalLimit:INFO: Created CPU cgroup for WEBDB
+2018-03-07 15:24:12,252 - CPUResource:INFO: Created CPU cgroup for WEBDB
+2018-03-07 15:24:12,257 - CPUResource:DEBUG: Adding 8185 in CPU cgroup for WEBDB
+2018-03-07 15:24:12,257 - ExternalLimit:DEBUG: Adding 8185 in CPU cgroup for WEBDB
+2018-03-07 15:24:12,258 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:WEBDB:8185\n
+2018-03-07 15:24:12,287 - ExternalLimit:INFO: Added 8185 in CPU cgroup for WEBDB
+2018-03-07 15:24:12,287 - CPUResource:INFO: Added 8185 in CPU cgroup for WEBDB
+2018-03-07 15:24:12,289 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:24:12,290 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:24:12,290 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\n
+2018-03-07 15:24:12,586 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:24:12,629 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:24:12,629 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:24:12,630 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:24:12,672 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:24:12,672 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:24:12,673 - CPUResource:DEBUG: Creating CPU resource for VIDEOENC
+2018-03-07 15:24:12,673 - ExternalLimit:DEBUG: Creating CPU cgroup for VIDEOENC
+2018-03-07 15:24:12,673 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:VIDEOENC\n
+2018-03-07 15:24:12,735 - ExternalLimit:INFO: Created CPU cgroup for VIDEOENC
+2018-03-07 15:24:12,735 - CPUResource:INFO: Created CPU cgroup for VIDEOENC
+2018-03-07 15:24:12,743 - CPUResource:DEBUG: Adding 8195 in CPU cgroup for VIDEOENC
+2018-03-07 15:24:12,744 - ExternalLimit:DEBUG: Adding 8195 in CPU cgroup for VIDEOENC
+2018-03-07 15:24:12,744 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:VIDEOENC:8195\n
+2018-03-07 15:24:12,788 - ExternalLimit:INFO: Added 8195 in CPU cgroup for VIDEOENC
+2018-03-07 15:24:12,788 - CPUResource:INFO: Added 8195 in CPU cgroup for VIDEOENC
+2018-03-07 15:24:12,790 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:24:12,791 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:24:12,791 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:24:12,791 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:24:13,148 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:24:13,173 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:24:13,174 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:24:13,174 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:24:13,199 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:24:13,200 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:24:13,200 - CPUResource:DEBUG: Creating CPU resource for SPAMBOT
+2018-03-07 15:24:13,200 - ExternalLimit:DEBUG: Creating CPU cgroup for SPAMBOT
+2018-03-07 15:24:13,200 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:SPAMBOT\n
+2018-03-07 15:24:13,263 - ExternalLimit:INFO: Created CPU cgroup for SPAMBOT
+2018-03-07 15:24:13,263 - CPUResource:INFO: Created CPU cgroup for SPAMBOT
+2018-03-07 15:24:13,276 - CPUResource:DEBUG: Adding 8205 in CPU cgroup for SPAMBOT
+2018-03-07 15:24:13,277 - ExternalLimit:DEBUG: Adding 8205 in CPU cgroup for SPAMBOT
+2018-03-07 15:24:13,277 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:SPAMBOT:8205\n
+2018-03-07 15:24:13,335 - ExternalLimit:INFO: Added 8205 in CPU cgroup for SPAMBOT
+2018-03-07 15:24:13,335 - CPUResource:INFO: Added 8205 in CPU cgroup for SPAMBOT
+2018-03-07 15:24:13,338 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:24:13,338 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:24:13,338 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:24:13,339 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:24:13,339 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:24:18,996 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:24:19,022 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:24:19,022 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:24:19,023 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:24:19,048 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:24:19,048 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:24:19,049 - Monitor:WARNING: Resource CPU returned negative score (-1.0) while spawning 'MEDICALDB' with policy 'platinum'.
+2018-03-07 15:24:20,289 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:24:20,332 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:24:20,332 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:24:20,333 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:24:20,372 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:24:20,372 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:24:20,373 - Monitor:INFO: Ignoring negative score -1.0 for resource CPU while spawning 'MEDICALDB' with policy 'platinum'.
+2018-03-07 15:24:20,373 - CPUResource:DEBUG: Creating CPU resource for MEDICALDB
+2018-03-07 15:24:20,373 - ExternalLimit:DEBUG: Creating CPU cgroup for MEDICALDB
+2018-03-07 15:24:20,373 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:MEDICALDB\n
+2018-03-07 15:24:20,435 - ExternalLimit:INFO: Created CPU cgroup for MEDICALDB
+2018-03-07 15:24:20,435 - CPUResource:INFO: Created CPU cgroup for MEDICALDB
+2018-03-07 15:24:20,443 - CPUResource:DEBUG: Adding 8227 in CPU cgroup for MEDICALDB
+2018-03-07 15:24:20,444 - ExternalLimit:DEBUG: Adding 8227 in CPU cgroup for MEDICALDB
+2018-03-07 15:24:20,445 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:MEDICALDB:8227\n
+2018-03-07 15:24:20,487 - ExternalLimit:INFO: Added 8227 in CPU cgroup for MEDICALDB
+2018-03-07 15:24:20,488 - CPUResource:INFO: Added 8227 in CPU cgroup for MEDICALDB
+2018-03-07 15:24:20,490 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:24:20,491 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:24:20,491 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:24:20,491 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:24:20,491 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:24:20,491 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:24:30,944 - CPUResource:DEBUG: Removing app VIDEOENC
+2018-03-07 15:24:30,944 - ExternalLimit:DEBUG: Removing task VIDEOENC
+2018-03-07 15:24:30,945 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:VIDEOENC\n
+2018-03-07 15:24:31,013 - ExternalLimit:INFO: Removed task VIDEOENC
+2018-03-07 15:24:31,014 - CPUResource:INFO: Removed app VIDEOENC
+2018-03-07 15:24:31,014 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:MEDICALDB:cpu:1000\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:24:31,070 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:24:31,071 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:24:31,071 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:MEDICALDB:cpu:1000\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:24:31,105 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:24:31,105 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:24:31,105 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:24:31,105 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:24:31,106 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:24:31,106 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:24:31,106 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:24:31,136 - CPUResource:DEBUG: Removing app WEBDB
+2018-03-07 15:24:31,136 - ExternalLimit:DEBUG: Removing task WEBDB
+2018-03-07 15:24:31,136 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:WEBDB\n
+2018-03-07 15:24:31,178 - ExternalLimit:INFO: Removed task WEBDB
+2018-03-07 15:24:31,179 - CPUResource:INFO: Removed app WEBDB
+2018-03-07 15:24:31,180 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\npolicy:BANKDB:cpu:1000\npolicy:MEDICALDB:cpu:1000\n
+2018-03-07 15:24:31,238 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:BANKDB:cpu.shares:1000\nset_limit:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:24:31,239 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50), 'BANKDB': CPULimit(shares=1000), 'MEDICALDB': CPULimit(shares=1000)}
+2018-03-07 15:24:31,239 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\npolicy:BANKDB:cpu:1000\npolicy:MEDICALDB:cpu:1000\n
+2018-03-07 15:24:31,300 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:BANKDB:cpu.shares:1000\nset_limit:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:24:31,301 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50), 'BANKDB': CPULimit(shares=1000), 'MEDICALDB': CPULimit(shares=1000)}
+2018-03-07 15:24:31,302 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:24:31,302 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:24:31,302 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:24:31,303 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:24:31,376 - CPUResource:DEBUG: Removing app MEDICALDB
+2018-03-07 15:24:31,376 - ExternalLimit:DEBUG: Removing task MEDICALDB
+2018-03-07 15:24:31,377 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:MEDICALDB\n
+2018-03-07 15:24:31,456 - ExternalLimit:INFO: Removed task MEDICALDB
+2018-03-07 15:24:31,457 - CPUResource:INFO: Removed app MEDICALDB
+2018-03-07 15:24:31,457 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\npolicy:BANKDB:cpu:1000\n
+2018-03-07 15:24:31,520 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:24:31,521 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50), 'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:24:31,522 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\npolicy:BANKDB:cpu:1000\n
+2018-03-07 15:24:31,584 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:24:31,585 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50), 'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:24:31,585 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:24:31,586 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:24:31,586 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:24:31,657 - CPUResource:DEBUG: Removing app SPAMBOT
+2018-03-07 15:24:31,657 - ExternalLimit:DEBUG: Removing task SPAMBOT
+2018-03-07 15:24:31,658 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:SPAMBOT\n
+2018-03-07 15:24:31,737 - ExternalLimit:INFO: Removed task SPAMBOT
+2018-03-07 15:24:31,738 - CPUResource:INFO: Removed app SPAMBOT
+2018-03-07 15:24:31,738 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\n
+2018-03-07 15:24:31,802 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:24:31,802 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:24:31,803 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\n
+2018-03-07 15:24:31,858 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:24:31,859 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:24:31,860 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:24:31,860 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:BANKDB:cpu.shares:1000\n
+2018-03-07 15:24:31,936 - CPUResource:DEBUG: Removing app BANKDB
+2018-03-07 15:24:31,937 - ExternalLimit:DEBUG: Removing task BANKDB
+2018-03-07 15:24:31,937 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:BANKDB\n
+2018-03-07 15:24:32,040 - ExternalLimit:INFO: Removed task BANKDB
+2018-03-07 15:24:32,041 - CPUResource:INFO: Removed app BANKDB
+2018-03-07 15:24:32,041 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input 
+2018-03-07 15:24:32,105 - ExternalPolicy:DEBUG: Got output: score:1.0\n
+2018-03-07 15:24:32,105 - ExternalPolicy:DEBUG: Calculated limits {}
+2018-03-07 15:24:32,106 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input 
+2018-03-07 15:24:32,170 - ExternalPolicy:DEBUG: Got output: score:1.0\n
+2018-03-07 15:24:32,171 - ExternalPolicy:DEBUG: Calculated limits {}
+2018-03-07 15:24:32,171 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input 
+2018-03-07 15:26:02,940 - MonitorServer:INFO: Stopping server
+2018-03-07 15:26:04,250 - MonitorResource:DEBUG: Loaded policy submodules: []
+2018-03-07 15:26:04,250 - MonitorResource:DEBUG: Loaded usage submodules: []
+2018-03-07 15:26:04,251 - MonitorResource:DEBUG: Loaded limit submodules: ['limit', 'external']
+2018-03-07 15:26:04,251 - MonitorResource:DEBUG: Using limit submodule 'limit'
+2018-03-07 15:26:04,255 - CPUResource:DEBUG: Loaded policy submodules: ['cpulimit', 'external', 'cpuweight']
+2018-03-07 15:26:04,256 - CPUResource:DEBUG: Loaded usage submodules: ['usage']
+2018-03-07 15:26:04,257 - CPUResource:DEBUG: Loaded limit submodules: ['limit', 'external']
+2018-03-07 15:26:04,258 - ExternalPolicy:DEBUG: Using executable '/root/cgmon/kappa/mod_policy_cpumin.py'
+2018-03-07 15:26:04,258 - CPUResource:DEBUG: Using policy submodule 'external'
+2018-03-07 15:26:04,258 - CPUResource:DEBUG: Using usage submodule 'usage'
+2018-03-07 15:26:04,258 - ExternalLimit:DEBUG: Using executable '/root/cgmon/kappa/mod_limit_cpu.py'
+2018-03-07 15:26:04,258 - CPUResource:DEBUG: Using limit submodule 'external'
+2018-03-07 15:26:04,542 - MonitorServer:INFO: Starting...
+2018-03-07 15:26:04,545 - MonitorServer:DEBUG: Registering command app_list
+2018-03-07 15:26:04,546 - MonitorServer:DEBUG: Registering command app_spawn
+2018-03-07 15:26:04,546 - MonitorServer:DEBUG: Registering command stop
+2018-03-07 15:26:04,547 - MonitorServer:DEBUG: Registering command resource_list
+2018-03-07 15:26:04,547 - MonitorServer:DEBUG: Registering command app_attach
+2018-03-07 15:26:04,547 - MonitorServer:DEBUG: Registering command kill
+2018-03-07 15:26:04,547 - MonitorServer:DEBUG: Registering command remove
+2018-03-07 15:26:04,548 - MonitorServer:DEBUG: Registering command limit_apply
+2018-03-07 15:26:04,548 - MonitorServer:DEBUG: Registering command limit_list
+2018-03-07 15:26:04,548 - MonitorServer:DEBUG: Registering command limit_create
+2018-03-07 15:26:04,549 - MonitorServer:INFO: Entering  main loop
+2018-03-07 15:26:09,618 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\n
+2018-03-07 15:26:09,680 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:26:09,681 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:26:09,682 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\n
+2018-03-07 15:26:09,742 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:26:09,743 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:26:09,744 - CPUResource:DEBUG: Creating CPU resource for BANKDB
+2018-03-07 15:26:09,744 - ExternalLimit:DEBUG: Creating CPU cgroup for BANKDB
+2018-03-07 15:26:09,745 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:BANKDB\n
+2018-03-07 15:26:09,823 - ExternalLimit:INFO: Created CPU cgroup for BANKDB
+2018-03-07 15:26:09,823 - CPUResource:INFO: Created CPU cgroup for BANKDB
+2018-03-07 15:26:09,834 - CPUResource:DEBUG: Adding 8896 in CPU cgroup for BANKDB
+2018-03-07 15:26:09,836 - ExternalLimit:DEBUG: Adding 8896 in CPU cgroup for BANKDB
+2018-03-07 15:26:09,837 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:BANKDB:8896\n
+2018-03-07 15:26:09,908 - ExternalLimit:INFO: Added 8896 in CPU cgroup for BANKDB
+2018-03-07 15:26:09,909 - CPUResource:INFO: Added 8896 in CPU cgroup for BANKDB
+2018-03-07 15:26:09,914 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:26:09,915 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:BANKDB:cpu.shares:1000\n
+2018-03-07 15:26:10,238 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\n
+2018-03-07 15:26:10,263 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:26:10,264 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:26:10,264 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\n
+2018-03-07 15:26:10,289 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:26:10,290 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:26:10,290 - CPUResource:DEBUG: Creating CPU resource for WEBDB
+2018-03-07 15:26:10,290 - ExternalLimit:DEBUG: Creating CPU cgroup for WEBDB
+2018-03-07 15:26:10,290 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:WEBDB\n
+2018-03-07 15:26:10,323 - ExternalLimit:INFO: Created CPU cgroup for WEBDB
+2018-03-07 15:26:10,323 - CPUResource:INFO: Created CPU cgroup for WEBDB
+2018-03-07 15:26:10,328 - CPUResource:DEBUG: Adding 8906 in CPU cgroup for WEBDB
+2018-03-07 15:26:10,329 - ExternalLimit:DEBUG: Adding 8906 in CPU cgroup for WEBDB
+2018-03-07 15:26:10,329 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:WEBDB:8906\n
+2018-03-07 15:26:10,358 - ExternalLimit:INFO: Added 8906 in CPU cgroup for WEBDB
+2018-03-07 15:26:10,358 - CPUResource:INFO: Added 8906 in CPU cgroup for WEBDB
+2018-03-07 15:26:10,360 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:26:10,361 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:26:10,361 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\n
+2018-03-07 15:26:10,582 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:26:10,609 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:26:10,610 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:26:10,610 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:26:10,636 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:26:10,636 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:26:10,637 - CPUResource:DEBUG: Creating CPU resource for VIDEOENC
+2018-03-07 15:26:10,637 - ExternalLimit:DEBUG: Creating CPU cgroup for VIDEOENC
+2018-03-07 15:26:10,637 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:VIDEOENC\n
+2018-03-07 15:26:10,671 - ExternalLimit:INFO: Created CPU cgroup for VIDEOENC
+2018-03-07 15:26:10,671 - CPUResource:INFO: Created CPU cgroup for VIDEOENC
+2018-03-07 15:26:10,676 - CPUResource:DEBUG: Adding 8918 in CPU cgroup for VIDEOENC
+2018-03-07 15:26:10,676 - ExternalLimit:DEBUG: Adding 8918 in CPU cgroup for VIDEOENC
+2018-03-07 15:26:10,677 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:VIDEOENC:8918\n
+2018-03-07 15:26:10,707 - ExternalLimit:INFO: Added 8918 in CPU cgroup for VIDEOENC
+2018-03-07 15:26:10,707 - CPUResource:INFO: Added 8918 in CPU cgroup for VIDEOENC
+2018-03-07 15:26:10,709 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:26:10,710 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:26:10,710 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:26:10,710 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:26:10,963 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:26:10,989 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:26:10,989 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:26:10,989 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:VIDEOENC:cpu:50\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:26:11,015 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:26:11,015 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50), 'VIDEOENC': CPULimit(shares=50)}
+2018-03-07 15:26:11,016 - CPUResource:DEBUG: Creating CPU resource for SPAMBOT
+2018-03-07 15:26:11,016 - ExternalLimit:DEBUG: Creating CPU cgroup for SPAMBOT
+2018-03-07 15:26:11,016 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:SPAMBOT\n
+2018-03-07 15:26:11,050 - ExternalLimit:INFO: Created CPU cgroup for SPAMBOT
+2018-03-07 15:26:11,050 - CPUResource:INFO: Created CPU cgroup for SPAMBOT
+2018-03-07 15:26:11,055 - CPUResource:DEBUG: Adding 8928 in CPU cgroup for SPAMBOT
+2018-03-07 15:26:11,056 - ExternalLimit:DEBUG: Adding 8928 in CPU cgroup for SPAMBOT
+2018-03-07 15:26:11,056 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:SPAMBOT:8928\n
+2018-03-07 15:26:11,085 - ExternalLimit:INFO: Added 8928 in CPU cgroup for SPAMBOT
+2018-03-07 15:26:11,085 - CPUResource:INFO: Added 8928 in CPU cgroup for SPAMBOT
+2018-03-07 15:26:11,088 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:26:11,088 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:26:11,088 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:26:11,088 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:26:11,088 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:26:16,804 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:26:16,847 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:26:16,848 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:26:16,848 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:26:16,889 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:26:16,889 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:26:16,890 - Monitor:WARNING: Resource CPU returned negative score (-1.0) while spawning 'MEDICALDB' with policy 'platinum'.
+2018-03-07 15:26:18,099 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:26:18,126 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:26:18,126 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:26:18,127 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:SPAMBOT:cpu:50\npolicy:MEDICALDB:cpu:1000\npolicy:VIDEOENC:cpu:50\n
+2018-03-07 15:26:18,153 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:26:18,153 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'VIDEOENC': CPULimit(shares=50), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:26:18,153 - Monitor:INFO: Ignoring negative score -1.0 for resource CPU while spawning 'MEDICALDB' with policy 'platinum'.
+2018-03-07 15:26:18,154 - CPUResource:DEBUG: Creating CPU resource for MEDICALDB
+2018-03-07 15:26:18,154 - ExternalLimit:DEBUG: Creating CPU cgroup for MEDICALDB
+2018-03-07 15:26:18,154 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input create:monitor:cpu:MEDICALDB\n
+2018-03-07 15:26:18,188 - ExternalLimit:INFO: Created CPU cgroup for MEDICALDB
+2018-03-07 15:26:18,188 - CPUResource:INFO: Created CPU cgroup for MEDICALDB
+2018-03-07 15:26:18,193 - CPUResource:DEBUG: Adding 8952 in CPU cgroup for MEDICALDB
+2018-03-07 15:26:18,194 - ExternalLimit:DEBUG: Adding 8952 in CPU cgroup for MEDICALDB
+2018-03-07 15:26:18,194 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input add:monitor:cpu:MEDICALDB:8952\n
+2018-03-07 15:26:18,224 - ExternalLimit:INFO: Added 8952 in CPU cgroup for MEDICALDB
+2018-03-07 15:26:18,224 - CPUResource:INFO: Added 8952 in CPU cgroup for MEDICALDB
+2018-03-07 15:26:18,227 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:26:18,227 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:26:18,227 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:26:18,227 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:26:18,227 - ExternalLimit:DEBUG: Setting limit for VIDEOENC to CPULimit(shares=50)
+2018-03-07 15:26:18,228 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\nset_limit:monitor:cpu:VIDEOENC:cpu.shares:50\n
+2018-03-07 15:26:28,729 - CPUResource:DEBUG: Removing app VIDEOENC
+2018-03-07 15:26:28,729 - ExternalLimit:DEBUG: Removing task VIDEOENC
+2018-03-07 15:26:28,729 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:VIDEOENC\n
+2018-03-07 15:26:28,781 - ExternalLimit:INFO: Removed task VIDEOENC
+2018-03-07 15:26:28,781 - CPUResource:INFO: Removed app VIDEOENC
+2018-03-07 15:26:28,781 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:MEDICALDB:cpu:1000\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:26:28,822 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:26:28,823 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:26:28,823 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:WEBDB:cpu:500\npolicy:BANKDB:cpu:1000\npolicy:MEDICALDB:cpu:1000\npolicy:SPAMBOT:cpu:50\n
+2018-03-07 15:26:28,855 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:WEBDB:cpu.shares:500\nset_limit:BANKDB:cpu.shares:1000\nset_limit:MEDICALDB:cpu.shares:1000\nset_limit:SPAMBOT:cpu.shares:50\n
+2018-03-07 15:26:28,855 - ExternalPolicy:DEBUG: Calculated limits {'WEBDB': CPULimit(shares=500), 'BANKDB': CPULimit(shares=1000), 'MEDICALDB': CPULimit(shares=1000), 'SPAMBOT': CPULimit(shares=50)}
+2018-03-07 15:26:28,856 - ExternalLimit:DEBUG: Setting limit for WEBDB to CPULimit(shares=500)
+2018-03-07 15:26:28,856 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:26:28,856 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:26:28,856 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:26:28,856 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:WEBDB:cpu.shares:500\nset_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:26:28,889 - CPUResource:DEBUG: Removing app WEBDB
+2018-03-07 15:26:28,889 - ExternalLimit:DEBUG: Removing task WEBDB
+2018-03-07 15:26:28,889 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:WEBDB\n
+2018-03-07 15:26:28,926 - ExternalLimit:INFO: Removed task WEBDB
+2018-03-07 15:26:28,927 - CPUResource:INFO: Removed app WEBDB
+2018-03-07 15:26:28,928 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\npolicy:BANKDB:cpu:1000\npolicy:MEDICALDB:cpu:1000\n
+2018-03-07 15:26:28,986 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:BANKDB:cpu.shares:1000\nset_limit:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:26:28,987 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50), 'BANKDB': CPULimit(shares=1000), 'MEDICALDB': CPULimit(shares=1000)}
+2018-03-07 15:26:28,988 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:SPAMBOT:cpu:50\npolicy:BANKDB:cpu:1000\npolicy:MEDICALDB:cpu:1000\n
+2018-03-07 15:26:29,050 - ExternalPolicy:DEBUG: Got output: score:-1.0\nset_limit:SPAMBOT:cpu.shares:50\nset_limit:BANKDB:cpu.shares:1000\nset_limit:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:26:29,051 - ExternalPolicy:DEBUG: Calculated limits {'SPAMBOT': CPULimit(shares=50), 'BANKDB': CPULimit(shares=1000), 'MEDICALDB': CPULimit(shares=1000)}
+2018-03-07 15:26:29,051 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:26:29,052 - ExternalLimit:DEBUG: Setting limit for SPAMBOT to CPULimit(shares=50)
+2018-03-07 15:26:29,052 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:26:29,052 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:SPAMBOT:cpu.shares:50\nset_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:26:29,087 - CPUResource:DEBUG: Removing app SPAMBOT
+2018-03-07 15:26:29,087 - ExternalLimit:DEBUG: Removing task SPAMBOT
+2018-03-07 15:26:29,087 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:SPAMBOT\n
+2018-03-07 15:26:29,143 - ExternalLimit:INFO: Removed task SPAMBOT
+2018-03-07 15:26:29,144 - CPUResource:INFO: Removed app SPAMBOT
+2018-03-07 15:26:29,144 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\npolicy:MEDICALDB:cpu:1000\n
+2018-03-07 15:26:29,206 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\nset_limit:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:26:29,207 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000), 'MEDICALDB': CPULimit(shares=1000)}
+2018-03-07 15:26:29,207 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\npolicy:MEDICALDB:cpu:1000\n
+2018-03-07 15:26:29,269 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\nset_limit:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:26:29,270 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000), 'MEDICALDB': CPULimit(shares=1000)}
+2018-03-07 15:26:29,271 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:26:29,271 - ExternalLimit:DEBUG: Setting limit for MEDICALDB to CPULimit(shares=1000)
+2018-03-07 15:26:29,271 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:BANKDB:cpu.shares:1000\nset_limit:monitor:cpu:MEDICALDB:cpu.shares:1000\n
+2018-03-07 15:26:29,347 - CPUResource:DEBUG: Removing app MEDICALDB
+2018-03-07 15:26:29,348 - ExternalLimit:DEBUG: Removing task MEDICALDB
+2018-03-07 15:26:29,348 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:MEDICALDB\n
+2018-03-07 15:26:29,429 - ExternalLimit:INFO: Removed task MEDICALDB
+2018-03-07 15:26:29,430 - CPUResource:INFO: Removed app MEDICALDB
+2018-03-07 15:26:29,431 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\n
+2018-03-07 15:26:29,490 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:26:29,491 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:26:29,491 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input policy:BANKDB:cpu:1000\n
+2018-03-07 15:26:29,550 - ExternalPolicy:DEBUG: Got output: score:1.0\nset_limit:BANKDB:cpu.shares:1000\n
+2018-03-07 15:26:29,551 - ExternalPolicy:DEBUG: Calculated limits {'BANKDB': CPULimit(shares=1000)}
+2018-03-07 15:26:29,552 - ExternalLimit:DEBUG: Setting limit for BANKDB to CPULimit(shares=1000)
+2018-03-07 15:26:29,552 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input set_limit:monitor:cpu:BANKDB:cpu.shares:1000\n
+2018-03-07 15:26:29,612 - CPUResource:DEBUG: Removing app BANKDB
+2018-03-07 15:26:29,613 - ExternalLimit:DEBUG: Removing task BANKDB
+2018-03-07 15:26:29,613 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input remove:monitor:cpu:BANKDB\n
+2018-03-07 15:26:29,691 - ExternalLimit:INFO: Removed task BANKDB
+2018-03-07 15:26:29,691 - CPUResource:INFO: Removed app BANKDB
+2018-03-07 15:26:29,691 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input 
+2018-03-07 15:26:29,750 - ExternalPolicy:DEBUG: Got output: score:1.0\n
+2018-03-07 15:26:29,750 - ExternalPolicy:DEBUG: Calculated limits {}
+2018-03-07 15:26:29,750 - ExternalPolicy:DEBUG: Calling /root/cgmon/kappa/mod_policy_cpumin.py with input 
+2018-03-07 15:26:29,804 - ExternalPolicy:DEBUG: Got output: score:1.0\n
+2018-03-07 15:26:29,804 - ExternalPolicy:DEBUG: Calculated limits {}
+2018-03-07 15:26:29,805 - ExternalLimit:DEBUG: Calling /root/cgmon/kappa/mod_limit_cpu.py with input 
+2018-03-08 00:56:26,732 - MonitorServer:INFO: Stopping server

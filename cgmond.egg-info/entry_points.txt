@@ -1,0 +1,5 @@
+[console_scripts]
+cgmon = cgmond.client.client:main
+cgmon-cgroup-cb = cgmond.scripts.cb:main
+cgmond = cgmond.daemon.monitor:entry_point
+
