@@ -34,5 +34,5 @@ for line in fileinput.input() :
         file.write(words[5])
         file.close()
     else :
-        print "Error motherfucker"
+        print "Error"
 
